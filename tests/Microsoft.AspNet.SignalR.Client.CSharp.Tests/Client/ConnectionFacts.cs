@@ -24,6 +24,10 @@ namespace Microsoft.AspNet.SignalR.CSharp.Tests
         {
             var connection = new Client.Connection("http://test", connectionQueryString);
 
+            Console.BackgroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine("*********************************");
+            Console.ResetColor();
+
             try
             {
                 connection.Start(new LongPollingTransport(new UrlInspectingHttpClient((url) =>
